@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog
+layout: home
+title: "Welcome to My Blog"
 ---
 
-第一篇博客

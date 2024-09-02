@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+<body>
 
+    <!-- 顶部导航栏 -->
+    <header class="site-header">
+        <nav class="nav">
+            <ul>
+                <li><a href="/">首页</a></li>
+                <li><a href="/reading/">读书</a></li>
+                <li><a href="/travel/">旅行</a></li>
+                <li><a href="/about/">关于</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 页面内容，将通过 {{ content }} 插入 -->
+    <div class="main-content">
+        {{ content }}
+    </div>
+
+    <!-- 页脚 -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 蒲素的博客. 版权所有.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

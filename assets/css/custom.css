@@ -1,1 +1,25 @@
+.home {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list li {
+  margin-bottom: 40px;
+}
+
+.post-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.post-meta {
+  display: block;
+  font-size: 14px;
+  color: #999;
+}

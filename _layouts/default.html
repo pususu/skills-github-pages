@@ -21,7 +21,7 @@
     </header>
 
     <!-- 主体内容，包含左侧栏和右侧内容 -->
-    <div class="main-content content-wrapper">
+    <div class="main-content">
         <!-- 左侧栏，包含头像和个人信息 -->
         <aside class="sidebar">
             <div class="profile">
@@ -32,15 +32,14 @@
         </aside>
 
         <!-- 右侧内容区域 -->
-        <section class="content" style="flex: 3;">
-            <!-- 添加文章列表 -->
+        <section class="content">
             <h2 class="latest-posts-title">最新文章</h2>
             <ul class="post-list">
                 {% for post in site.posts %}
                     <li class="post-item">
-                        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3> <!-- 确保链接使用了 site.baseurl -->
-                        <p style="margin-left: 2em;">{{ post.excerpt }}</p> <!-- 右移2个字符 -->
-                        <p style="margin-left: 2em;"><small>{{ post.date | date: "%Y-%m-%d" }}</small></p> <!-- 右移2个字符 -->
+                        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                        <p>{{ post.excerpt }}</p>
+                        <p><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>
                     </li>
                 {% endfor %}
             </ul>

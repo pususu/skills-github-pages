@@ -1,10 +1,8 @@
 ---
-layout: default
+layout: home
 title: "Welcome to My Blog"
 ---
 
-# Welcome to My Blog
+# 欢迎来到我的博客
 
-This is a simple blog built with Markdown and HTML. Below are some of my latest posts.
-
-[My First Post](./my-first-post.html)
+这里是你可以展示自我介绍或其他重要内容的地方。

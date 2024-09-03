@@ -1,6 +1,6 @@
 title: pusu's blog
 author: pusu
-description: "A simple blog using Markdown and HTML"
-markdown: kramdown
-baseurl: ""
-
+description: >- # this means to ignore newlines until "baseurl:"
+  欢迎来到蒲素的博客，这里是我的写作自留地。
+baseurl: "" # 使用自定义域名时，baseurl 应该设置为空
+url: "https://www.pusu.life" # 你的自定义域名

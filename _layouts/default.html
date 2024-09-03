@@ -12,27 +12,27 @@
     <header class="site-header">
         <nav class="nav">
             <ul>
-                <li><a href="/">首页</a></li>
-                <li><a href="/reading/">读书</a></li>
-                <li><a href="/travel/">旅行</a></li>
-                <li><a href="/about/">关于</a></li>
+                <li><a href="{{ site.baseurl }}/">首页</a></li>
+                <li><a href="{{ site.baseurl }}/reading/">读书</a></li>
+                <li><a href="{{ site.baseurl }}/travel/">旅行</a></li>
+                <li><a href="{{ site.baseurl }}/about/">关于</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- 主体内容，包含左侧栏和右侧内容 -->
-    <div class="main-content">
+    <div class="main-content" style="display: flex;">
         <!-- 左侧栏，包含头像和个人信息 -->
-        <aside class="sidebar">
+        <aside class="sidebar" style="flex: 1; max-width: 200px;">
             <div class="profile">
-                <img src="https://static.openmindclub.com/2024-09-02-79801724253479_.pic.jpg" alt="蒲素的头像">
+                <img src="https://static.openmindclub.com/2024-09-02-79801724253479_.pic.jpg" alt="蒲素的头像" style="width: 100%;">
                 <h2>蒲素</h2>
                 <p>我的写作自留地</p>
             </div>
         </aside>
 
-        <!-- 页面内容，将通过 {{ content }} 插入 -->
-        <section class="content">
+        <!-- 右侧内容区域，将通过 {{ content }} 插入 -->
+        <section class="content" style="flex: 3;">
             {{ content }}
         </section>
     </div>
@@ -40,7 +40,7 @@
     <!-- 页脚 -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 蒲素的博客</p>
+            <p>&copy; 2024 蒲素的博客. 版权所有.</p>
         </div>
     </footer>
 

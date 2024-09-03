@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "第一篇博客"
-date: 2024-09-01
+title: "My First Post"
+date: 2024-09-02 10:00:00
 categories: blog
 ---
 

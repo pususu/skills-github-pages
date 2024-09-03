@@ -2,3 +2,5 @@ title: pusu's blog
 author: pusu
 description: "A simple blog using Markdown and HTML"
 markdown: kramdown
+baseurl: ""
+

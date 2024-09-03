@@ -1,9 +1,9 @@
 ---
 layout: default
-title: "首页"
-permalink: /
+title: "读书"
+permalink: /reading/
 ---
 
-# 欢迎来到我的博客
+# 读书
 
-这里展示所有文章。
+这里展示与读书相关的文章。

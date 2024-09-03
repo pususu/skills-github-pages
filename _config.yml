@@ -2,5 +2,5 @@ title: pusu's blog
 author: pusu
 description: >- # this means to ignore newlines until "baseurl:"
   欢迎来到蒲素的博客，这里是我的写作自留地。
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.com/pususu/skills-github-pages" # replace with your GitHub Pages URL
+baseurl: "/skills-github-pages" # the subpath of your site, e.g. /blog
+url: "https://pususu.github.io" # your GitHub Pages URL

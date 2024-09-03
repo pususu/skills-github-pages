@@ -2,8 +2,6 @@ title: pusu's blog
 author: pusu
 description: >- # this means to ignore newlines until "baseurl:"
   欢迎来到蒲素的博客，这里是我的写作自留地。
-baseurl: "" # 为空，因为你使用的是自定义域名
-url: "https://www.pusu.life" # 你的自定义域名
 
 theme: jekyll-theme-minimal
 

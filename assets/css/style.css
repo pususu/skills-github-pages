@@ -87,7 +87,7 @@ body {
 /* 右侧内容区域样式 */
 .content {
     flex: 3;
-    padding-left: 526px; /* 控制右侧内容区域距离左边的距离 */
+    padding-left: 250px; /* 控制右侧内容区域距离左边的距离 */
 }
 
 /* 页脚样式 */

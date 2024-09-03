@@ -15,5 +15,7 @@ title: 欢迎来到我的博客
             <p>{{ post.excerpt }}</p>
             <p><small>{{ post.date | date: "%Y-%m-%d" }}</small></p>
         </li>
+    {% else %}
+        <li>没有找到任何文章。</li>
     {% endfor %}
 </ul>

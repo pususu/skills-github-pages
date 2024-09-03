@@ -57,7 +57,7 @@ body {
 .sidebar {
     flex: 1; /* 左侧栏占据1份宽度 */
     max-width: 250px; /* 设置最大宽度为250px */
-    margin-right: 20px; /* 右外边距为20px */
+    margin-right: 40px; /* 右外边距为40px */
 }
 
 /* 个人信息部分 */
@@ -87,6 +87,7 @@ body {
 /* 右侧内容区域样式 */
 .content {
     flex: 3; /* 右侧内容区域占据3份宽度 */
+    margin-left: 1em; /* 文章内容相对于“最新文章”右移两个字符 */
 }
 
 /* 右侧标题样式 */

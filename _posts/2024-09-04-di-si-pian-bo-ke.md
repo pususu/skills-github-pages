@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "di si pian bo ke"
-date: 2024-09-04
+title: "第一篇博客"
+date: 2024-09-04 12:00:00
 categories: jekyll update
 ---
 

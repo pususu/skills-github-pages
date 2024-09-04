@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* 居中对齐 */
+    justify-content: center;
     height: 72px;
     align-items: center;
 }
@@ -48,6 +48,7 @@ body {
 /* 主体内容布局 */
 .main-content {
     display: flex;
+    align-items: flex-start; /* 确保左右内容顶部对齐 */
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
@@ -87,7 +88,7 @@ body {
 /* 右侧内容区域样式 */
 .content {
     flex: 3;
-    padding-left: 100px; /* 控制右侧内容区域距离左边的距离 */
+    padding-left: 50px; /* 保持与左侧内容的对齐 */
 }
 
 /* 文章内容样式 */

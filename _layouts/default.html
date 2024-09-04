@@ -21,7 +21,7 @@
     </header>
 
     <!-- 主体内容，包含左侧栏和右侧内容 -->
-    <div class="main-content">
+    <div class="main-content" style="display: flex; align-items: flex-start;">
         <!-- 左侧栏，包含头像和个人信息 -->
         <aside class="sidebar">
             <div class="profile">
@@ -32,21 +32,15 @@
         </aside>
 
         <!-- 右侧内容区域 -->
-        <section class="content post-content" style="padding-left: 50px;"> <!-- 文章内容右移一些 -->
-            <article class="post">
-                <h1>{{ page.title }}</h1>
-                <p><small>{{ page.date | date: "%Y-%m-%d" }}</small></p>
-                <div class="post-body">
-                    {{ content }}
-                </div>
-            </article>
+        <section class="content" style="flex: 3;">
+            {{ content }}
         </section>
     </div>
 
     <!-- 页脚 -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 蒲素的博客</p>
+            <p>&copy; 2024 蒲素的博客. 版权所有.</p>
         </div>
     </footer>
 

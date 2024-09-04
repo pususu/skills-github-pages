@@ -23,7 +23,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* 还原为居中对齐 */
+    justify-content: center; /* 居中对齐 */
     height: 72px;
     align-items: center;
 }
@@ -90,8 +90,24 @@ body {
     padding-left: 100px; /* 控制右侧内容区域距离左边的距离 */
 }
 
+/* 文章内容样式 */
 .post-content {
-    padding-left: 50px; /* 在文章页面中内容稍微右移 */
+    margin-top: 20px;
+}
+
+.post-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    font-size: 18px;
+    color: #666;
+}
+
+.post-content .post-body {
+    margin-top: 20px;
+    line-height: 1.8;
 }
 
 /* 页脚样式 */

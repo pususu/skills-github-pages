@@ -20,20 +20,26 @@
         </nav>
     </header>
 
-    <!-- 主体内容 -->
+    <!-- 主体内容，包含左侧栏和右侧内容 -->
     <div class="main-content">
         <!-- 左侧栏，包含头像和个人信息 -->
         <aside class="sidebar">
             <div class="profile">
-                <img src="https://static.openmindclub.com/2024-09-02-79801724253479_.pic.jpg" alt="头像">
+                <img src="https://static.openmindclub.com/2024-09-02-79801724253479_.pic.jpg" alt="蒲素的头像">
                 <h2>蒲素</h2>
                 <p>我的写作自留地</p>
             </div>
         </aside>
 
         <!-- 右侧内容区域 -->
-        <section class="content">
-            {{ content }}
+        <section class="content post-content" style="padding-left: 50px;"> <!-- 文章内容右移一些 -->
+            <article class="post">
+                <h1>{{ page.title }}</h1>
+                <p><small>{{ page.date | date: "%Y-%m-%d" }}</small></p>
+                <div class="post-body">
+                    {{ content }}
+                </div>
+            </article>
         </section>
     </div>
 

@@ -58,7 +58,7 @@ body {
 .sidebar {
     flex: 1;
     max-width: 250px;
-    margin-right: 20px;
+    margin-right: 30px; /* 统一的右边距 */
 }
 
 /* 个人信息部分 */
@@ -88,7 +88,7 @@ body {
 /* 右侧内容区域样式 */
 .content {
     flex: 3;
-    padding-left: 50px; /* 保持与左侧内容的对齐 */
+    padding-left: 30px; /* 保持与左侧内容的对齐 */
 }
 
 /* 文章内容样式 */

@@ -136,6 +136,7 @@ body {
     margin: 0 auto; /* 居中显示图片 */
 }
 
+
 /* 在文章日期下方添加作者信息 */
 .post-content .post-meta {
     font-size: 14px;
@@ -177,6 +178,13 @@ body {
     .content {
         padding-left: 0; /* 移除内容的左边距 */
     }
+
+    /* 确保作者信息在小屏幕上显示 */
+    .post-content .post-meta {
+        display: block;
+        font-size: 14px;
+        color: #999;
+    }
 }
 
 /* 针对手机和超小屏幕 */
@@ -191,5 +199,12 @@ body {
 
     .sidebar {
         display: none; /* 隐藏左侧栏 */
+    }
+
+    /* 确保作者信息在超小屏幕上显示 */
+    .post-content .post-meta {
+        display: block;
+        font-size: 14px;
+        color: #999;
     }
 }

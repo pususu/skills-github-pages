@@ -10,6 +10,14 @@ body {
     padding: 0;
 }
 
+/* 全局容器 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
 /* 顶部导航栏样式 */
 .site-header {
     background-color: #f7f7f7;
@@ -26,12 +34,13 @@ body {
     justify-content: center;
     height: 72px;
     align-items: center;
+    flex-wrap: wrap; /* 让导航栏在移动端自适应 */
 }
 
 /* 导航栏中的每个项目 */
 .nav ul li {
     margin-right: 50px;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 /* 导航栏链接样式 */
@@ -48,6 +57,7 @@ body {
 /* 主体内容布局 */
 .main-content {
     display: flex;
+    flex-wrap: wrap; /* 让内容区域在移动端自适应 */
     align-items: flex-start; /* 确保左右内容顶部对齐 */
     max-width: 1200px;
     margin: 20px auto;
@@ -58,7 +68,11 @@ body {
 .sidebar {
     flex: 1;
     max-width: 250px;
-    margin-right: 30px; /* 统一的右边距 */
+    margin-right: 30px;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
 }
 
 /* 个人信息部分 */
@@ -89,6 +103,7 @@ body {
 .content {
     flex: 3;
     padding-left: 30px; /* 保持与左侧内容的对齐 */
+    min-width: 300px; /* 确保在小屏幕下有适当宽度 */
 }
 
 /* 文章内容样式 */
@@ -109,6 +124,7 @@ body {
 .post-content .post-body {
     margin-top: 20px;
     line-height: 1.8;
+    word-wrap: break-word; /* 确保长单词自动换行 */
 }
 
 /* 页脚样式 */
@@ -123,4 +139,38 @@ body {
 .site-footer .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* 响应式设计 */
+
+/* 针对平板和小屏幕 */
+@media (max-width: 768px) {
+    .nav ul li {
+        margin-right: 20px; /* 减少导航间距 */
+        font-size: 16px; /* 缩小字体 */
+    }
+
+    .sidebar {
+        max-width: 100%; /* 在小屏幕下让侧边栏全宽 */
+        margin: 0 0 20px 0; /* 在内容上方显示侧边栏 */
+    }
+
+    .content {
+        padding-left: 0; /* 移除内容的左边距 */
+    }
+}
+
+/* 针对手机和超小屏幕 */
+@media (max-width: 480px) {
+    .nav ul li {
+        font-size: 14px; /* 进一步缩小导航字体 */
+    }
+
+    .main-content {
+        flex-direction: column; /* 竖直排列侧边栏和内容 */
+    }
+
+    .sidebar {
+        margin-right: 0; /* 移除侧边距 */
+    }
 }

@@ -128,6 +128,14 @@ body {
     word-wrap: break-word; /* 确保长单词自动换行 */
 }
 
+/* 自动缩放图片到与正文宽度一致 */
+.post-content img {
+    max-width: 100%; /* 图片最大宽度为父容器的100% */
+    height: auto;   /* 高度自动调整，保持图片比例 */
+    display: block;
+    margin: 0 auto; /* 居中显示图片 */
+}
+
 /* 在文章日期下方添加作者信息 */
 .post-content .post-meta {
     font-size: 14px;

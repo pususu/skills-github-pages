@@ -71,8 +71,9 @@ body {
     margin-right: 30px;
     text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
+    /* 移除背景颜色 */
+    background-color: transparent; /* 去掉灰色背景 */
+    border-radius: 0; /* 移除圆角 */
 }
 
 /* 个人信息部分 */
@@ -127,6 +128,17 @@ body {
     word-wrap: break-word; /* 确保长单词自动换行 */
 }
 
+/* 在文章日期下方添加作者信息 */
+.post-content .post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-content .post-meta::after {
+    content: " | 作者：蒲素";
+}
+
 /* 页脚样式 */
 .site-footer {
     background-color: #f7f7f7;
@@ -151,8 +163,7 @@ body {
     }
 
     .sidebar {
-        max-width: 100%; /* 在小屏幕下让侧边栏全宽 */
-        margin: 0 0 20px 0; /* 在内容上方显示侧边栏 */
+        display: none; /* 在平板和手机屏幕下隐藏左侧栏 */
     }
 
     .content {
@@ -171,6 +182,6 @@ body {
     }
 
     .sidebar {
-        margin-right: 0; /* 移除侧边距 */
+        display: none; /* 隐藏左侧栏 */
     }
 }

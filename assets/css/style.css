@@ -4,7 +4,7 @@
 body {
     font-family: "Arial", sans-serif;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.8; /* 调整整体行距 */
     background-color: #fff;
     margin: 0;
     padding: 0;
@@ -71,7 +71,6 @@ body {
     margin-right: 30px;
     text-align: center;
     padding: 20px;
-    /* 移除背景颜色 */
     background-color: transparent; /* 去掉灰色背景 */
     border-radius: 0; /* 移除圆角 */
 }
@@ -117,18 +116,19 @@ body {
     margin-bottom: 10px;
 }
 
-
+/* 文章段落样式 */
 .post-content p {
     font-size: 18px;
     color: #666;
     line-height: 1.8; /* 保持行距 */
-    margin-bottom: 40px !important; /* 强制增加段落间距 */
+    margin-bottom: 40px; /* 强制增加段落间距 */
 }
 
+/* 确保长单词自动换行并保持段落的行距 */
 .post-content .post-body {
     margin-top: 20px;
     line-height: 1.8;
-    word-wrap: break-word; /* 确保长单词自动换行 */
+    word-wrap: break-word;
 }
 
 /* 自动缩放图片到与正文宽度一致 */
@@ -138,7 +138,6 @@ body {
     display: block;
     margin: 0 auto; /* 居中显示图片 */
 }
-
 
 /* 在文章日期下方添加作者信息 */
 .post-content .post-meta {

@@ -113,21 +113,33 @@ body {
     margin-bottom: 10px;
 }
 
+/* 日期与段落的间距调整 */
+.post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px; /* 将日期下方的间距减少 */
+}
+
 /* 段落与段落之间的间距 */
 .post-content p {
     font-size: 18px;
     color: #666;
     line-height: 1.8;
     margin-bottom: 20px; /* 设置段落之间的间距 */
-    padding-bottom: 20px; /* 添加内部填充，确保段落之间的间距更大 */
-    word-wrap: break-word; /* 自动换行 */
+    padding-bottom: 10px; /* 确保段落之间的间距不至于太大 */
 }
 
-/* 确保长单词自动换行 */
-.post-content .post-body {
+/* 标题与段落的间距调整 */
+.post-content h2 {
+    font-size: 24px;
+    margin-top: 20px; /* 减少标题上方的间距 */
+    margin-bottom: 10px; /* 减少标题下方的间距 */
+}
+
+/* 文章内容样式 */
+.post-content {
     margin-top: 20px;
-    line-height: 1.8;
-    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 /* 自动缩放图片 */
@@ -137,6 +149,7 @@ body {
     display: block;
     margin: 0 auto;
 }
+
 
 /* 在文章日期下方添加作者信息 */
 .post-content .post-meta {

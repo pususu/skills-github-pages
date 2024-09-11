@@ -117,9 +117,12 @@ body {
     margin-bottom: 10px;
 }
 
+
 .post-content p {
     font-size: 18px;
     color: #666;
+    line-height: 1.8; /* 保持行距 */
+    margin-bottom: 20px; /* 增加段落间距 */
 }
 
 .post-content .post-body {

@@ -116,12 +116,17 @@ body {
     margin-bottom: 10px;
 }
 
-/* 文章段落样式 */
+/* 强制提高段落间距的优先级 */
 .post-content p {
     font-size: 18px;
     color: #666;
-    line-height: 1.8; /* 保持行距 */
-    margin-bottom: 40px; /* 强制增加段落间距 */
+    line-height: 1.8;
+    margin-bottom: 40px !important; /* 强制段落间距 */
+}
+
+/* 针对所有段落的更高优先级选择器 */
+.content .post-content p {
+    margin-bottom: 40px !important;
 }
 
 /* 确保长单词自动换行并保持段落的行距 */

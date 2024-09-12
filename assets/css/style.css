@@ -1,8 +1,10 @@
+/* 样式文件：styles.css */
+
 /* 全局样式 */
 body {
     font-family: "Arial", sans-serif;
     color: #333;
-    line-height: 1.8;
+    line-height: 1.8; /* 调整整体行距 */
     background-color: #fff;
     margin: 0;
     padding: 0;
@@ -32,7 +34,7 @@ body {
     justify-content: center;
     height: 72px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 让导航栏在移动端自适应 */
 }
 
 /* 导航栏中的每个项目 */
@@ -55,8 +57,8 @@ body {
 /* 主体内容布局 */
 .main-content {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    flex-wrap: wrap; /* 让内容区域在移动端自适应 */
+    align-items: flex-start; /* 确保左右内容顶部对齐 */
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
@@ -69,7 +71,8 @@ body {
     margin-right: 30px;
     text-align: center;
     padding: 20px;
-    background-color: transparent;
+    background-color: transparent; /* 去掉灰色背景 */
+    border-radius: 0; /* 移除圆角 */
 }
 
 /* 个人信息部分 */
@@ -77,17 +80,20 @@ body {
     text-align: center;
 }
 
+/* 头像样式 */
 .sidebar .profile img {
     border-radius: 50%;
     width: 120px;
     height: 120px;
 }
 
+/* 左侧标题样式 */
 .sidebar .profile h2 {
     font-size: 24px;
     margin-top: 10px;
 }
 
+/* 左侧描述文字样式 */
 .sidebar .profile p {
     font-size: 16px;
     color: #666;
@@ -96,63 +102,52 @@ body {
 /* 右侧内容区域样式 */
 .content {
     flex: 3;
-    padding-left: 30px;
-    min-width: 300px;
-}
-
-/* 日期与段落的间距调整 */
-.post-meta {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 5px; /* 减少日期下方的间距 */
-    margin-top: 0;      /* 去除日期上方的多余间距 */
-}
-
-/* 段落与段落之间的间距 */
-.post-content p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 20px; /* 增加段落之间的间距 */
-    padding-bottom: 0; /* 不再需要额外填充 */
-    word-wrap: break-word; /* 确保长单词自动换行 */
-}
-
-/* 标题与段落的间距调整 */
-.post-content h1, .post-content h2, .post-content h3 {
-    margin-top: 20px;  /* 增加标题上方的间距 */
-    margin-bottom: 10px; /* 减少标题下方的间距 */
-    line-height: 1.3; /* 调整标题的行间距 */
-}
-
-/* 星号 (斜体或粗体) 与段落的间距调整 */
-.post-content em, .post-content strong {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* 列表项的间距 */
-.post-content ul {
-    margin: 0 0 20px 20px;
-    padding: 0;
-}
-
-.post-content ul li {
-    margin-bottom: 10px;
+    padding-left: 30px; /* 保持与左侧内容的对齐 */
+    min-width: 300px; /* 确保在小屏幕下有适当宽度 */
 }
 
 /* 文章内容样式 */
 .post-content {
-    margin-top: 10px;
-    white-space: pre-wrap; /* 保留换行符和空格，确保段落的显示 */
+    margin-top: 20px;
 }
 
-/* 自动缩放图片 */
+.post-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* 文章段落样式 */
+.post-content p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8; /* 保持行距 */
+    margin-bottom: 40px; /* 强制增加段落间距 */
+}
+
+/* 确保长单词自动换行并保持段落的行距 */
+.post-content .post-body {
+    margin-top: 20px;
+    line-height: 1.8;
+    word-wrap: break-word;
+}
+
+/* 自动缩放图片到与正文宽度一致 */
 .post-content img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* 图片最大宽度为父容器的100% */
+    height: auto;   /* 高度自动调整，保持图片比例 */
     display: block;
-    margin: 0 auto;
+    margin: 0 auto; /* 居中显示图片 */
+}
+
+/* 在文章日期下方添加作者信息 */
+.post-content .post-meta {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.post-content .post-meta::after {
+    content: " | 作者：蒲素";
 }
 
 /* 页脚样式 */
@@ -174,18 +169,19 @@ body {
 /* 针对平板和小屏幕 */
 @media (max-width: 768px) {
     .nav ul li {
-        margin-right: 20px;
-        font-size: 16px;
+        margin-right: 20px; /* 减少导航间距 */
+        font-size: 16px; /* 缩小字体 */
     }
 
     .sidebar {
-        display: none;
+        display: none; /* 在平板和手机屏幕下隐藏左侧栏 */
     }
 
     .content {
-        padding-left: 0;
+        padding-left: 0; /* 移除内容的左边距 */
     }
 
+    /* 确保作者信息在小屏幕上显示 */
     .post-content .post-meta {
         display: block;
         font-size: 14px;
@@ -196,17 +192,18 @@ body {
 /* 针对手机和超小屏幕 */
 @media (max-width: 480px) {
     .nav ul li {
-        font-size: 14px;
+        font-size: 14px; /* 进一步缩小导航字体 */
     }
 
     .main-content {
-        flex-direction: column;
+        flex-direction: column; /* 竖直排列侧边栏和内容 */
     }
 
     .sidebar {
-        display: none;
+        display: none; /* 隐藏左侧栏 */
     }
 
+    /* 确保作者信息在超小屏幕上显示 */
     .post-content .post-meta {
         display: block;
         font-size: 14px;

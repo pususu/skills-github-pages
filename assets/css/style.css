@@ -1,5 +1,3 @@
-/* 样式文件：styles.css */
-
 /* 全局样式 */
 body {
     font-family: "Arial", sans-serif;
@@ -18,106 +16,11 @@ body {
     box-sizing: border-box;
 }
 
-/* 顶部导航栏样式 */
-.site-header {
-    background-color: #f7f7f7;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-}
-
-/* 导航栏列表样式 */
-.nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    height: 72px;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* 导航栏中的每个项目 */
-.nav ul li {
-    margin-right: 50px;
-    font-size: 18px;
-}
-
-/* 导航栏链接样式 */
-.nav ul li a {
-    text-decoration: none;
-    color: #798288;
-    font-weight: bold;
-}
-
-.nav ul li a:hover {
-    color: #000;
-}
-
-/* 主体内容布局 */
-.main-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-/* 左侧栏样式 */
-.sidebar {
-    flex: 1;
-    max-width: 250px;
-    margin-right: 30px;
-    text-align: center;
-    padding: 20px;
-    background-color: transparent;
-}
-
-/* 个人信息部分 */
-.sidebar .profile {
-    text-align: center;
-}
-
-.sidebar .profile img {
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-}
-
-.sidebar .profile h2 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.sidebar .profile p {
-    font-size: 16px;
-    color: #666;
-}
-
-/* 右侧内容区域样式 */
-.content {
-    flex: 3;
-    padding-left: 30px;
-    min-width: 300px;
-}
-
-/* 文章内容样式 */
-.post-content {
-    margin-top: 20px;
-    white-space: pre-wrap; /* 保留空格和换行，确保段落有足够的间距 */
-}
-
-.post-content h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
 /* 日期与段落的间距调整 */
 .post-meta {
     font-size: 14px;
     color: #999;
-    margin-bottom: 10px; /* 将日期下方的间距减少 */
+    margin-bottom: 5px; /* 减少日期下方的间距 */
 }
 
 /* 段落与段落之间的间距 */
@@ -125,21 +28,21 @@ body {
     font-size: 18px;
     color: #666;
     line-height: 1.8;
-    margin-bottom: 20px; /* 设置段落之间的间距 */
-    padding-bottom: 10px; /* 确保段落之间的间距不至于太大 */
+    margin-bottom: 15px; /* 调整段落之间的间距为15px */
+    padding-bottom: 5px; /* 添加内部填充，进一步调整段落间距 */
 }
 
 /* 标题与段落的间距调整 */
 .post-content h2 {
     font-size: 24px;
-    margin-top: 20px; /* 减少标题上方的间距 */
-    margin-bottom: 10px; /* 减少标题下方的间距 */
+    margin-top: 15px;  /* 减少标题上方的间距 */
+    margin-bottom: 5px; /* 减少标题下方的间距 */
 }
 
 /* 文章内容样式 */
 .post-content {
-    margin-top: 20px;
-    white-space: pre-wrap;
+    margin-top: 10px;
+    white-space: pre-wrap; /* 保留换行符和空格，确保段落的显示 */
 }
 
 /* 自动缩放图片 */
@@ -148,18 +51,6 @@ body {
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-
-/* 在文章日期下方添加作者信息 */
-.post-content .post-meta {
-    font-size: 14px;
-    color: #999;
-    margin-bottom: 10px;
-}
-
-.post-content .post-meta::after {
-    content: " | 作者：蒲素";
 }
 
 /* 页脚样式 */
@@ -180,11 +71,6 @@ body {
 
 /* 针对平板和小屏幕 */
 @media (max-width: 768px) {
-    .nav ul li {
-        margin-right: 20px;
-        font-size: 16px;
-    }
-
     .sidebar {
         display: none;
     }

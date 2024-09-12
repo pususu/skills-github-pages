@@ -108,26 +108,21 @@ body {
     margin-top: 0;      /* 去除日期上方的多余间距 */
 }
 
-/* 段落与段落之间的间距 */
-.post-content p {
-    font-size: 18px;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 15px; /* 调整段落之间的间距为15px */
-    padding-bottom: 5px; /* 添加内部填充，进一步调整段落间距 */
-    word-wrap: break-word; /* 确保长单词自动换行 */
-}
-
-/* 标题与段落的间距调整 */
+/* 强化标题与段落的间距 */
 .post-content h1, .post-content h2, .post-content h3 {
-    margin-top: 10px;  /* 减少标题上方的间距 */
-    margin-bottom: 10px; /* 减少标题下方的间距 */
+    margin-top: 10px !important;  /* 强制减少标题上方的间距 */
+    margin-bottom: 10px !important; /* 强制减少标题下方的间距 */
 }
 
-/* 星号 (斜体或粗体) 与段落的间距调整 */
+/* 强化段落与段落之间的间距 */
+.post-content p {
+    margin-bottom: 15px !important;  /* 强制段落之间的间距 */
+}
+
+/* 强化星号 (斜体或粗体) 的间距 */
 .post-content em, .post-content strong {
-    margin: 0; /* 移除默认的额外间距 */
-    padding: 0; /* 确保没有额外的内边距 */
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* 文章内容样式 */

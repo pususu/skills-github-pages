@@ -1,0 +1,191 @@
+/* 代码高亮样式 - 绿色主题 */
+.highlight {
+    background-color: var(--code-bg) !important;
+    border-radius: 6px;
+    margin: 1rem 0;
+    overflow-x: auto;
+}
+
+.highlight pre {
+    margin: 0;
+    padding: 1rem;
+    background: none !important;
+}
+
+/* 代码行号 */
+.highlight .ln {
+    color: var(--text-secondary) !important;
+    margin-right: 1rem;
+    user-select: none;
+}
+
+/* 语法高亮颜色 */
+/* 关键字 */
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt {
+    color: #ff79c6 !important; /* 粉红色关键字 */
+}
+
+/* 函数名 */
+.highlight .nf,
+.highlight .nb {
+    color: #50fa7b !important; /* 绿色函数名 */
+}
+
+/* 字符串 */
+.highlight .s,
+.highlight .s1,
+.highlight .s2 {
+    color: #f1fa8c !important; /* 黄色字符串 */
+}
+
+/* 注释 */
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs {
+    color: #6272a4 !important; /* 灰色注释 */
+}
+
+/* 数字 */
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo {
+    color: #bd93f9 !important; /* 紫色数字 */
+}
+
+/* 变量名 */
+.highlight .nv,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi {
+    color: #8be9fd !important; /* 青色变量 */
+}
+
+/* 类型 */
+.highlight .nc,
+.highlight .no {
+    color: #50fa7b !important; /* 绿色类型 */
+}
+
+/* 操作符 */
+.highlight .o,
+.highlight .ow {
+    color: #ff79c6 !important; /* 粉红色操作符 */
+}
+
+/* 标点符号 */
+.highlight .p {
+    color: var(--text-primary) !important;
+}
+
+/* 标签 */
+.highlight .nt {
+    color: #ff79c6 !important; /* 粉红色标签 */
+}
+
+/* 属性 */
+.highlight .na {
+    color: #50fa7b !important; /* 绿色属性 */
+}
+
+/* 值 */
+.highlight .l,
+.highlight .ld {
+    color: #f1fa8c !important; /* 黄色值 */
+}
+
+/* 错误 */
+.highlight .err {
+    color: #ff5555 !important; /* 红色错误 */
+}
+
+/* 警告 */
+.highlight .w {
+    color: #6272a4 !important; /* 灰色警告 */
+}
+
+/* 布尔值 */
+.highlight .kc {
+    color: #bd93f9 !important; /* 紫色布尔值 */
+}
+
+/* 空值 */
+.highlight .nl {
+    color: #bd93f9 !important; /* 紫色空值 */
+}
+
+/* 函数调用 */
+.highlight .fm {
+    color: #50fa7b !important; /* 绿色函数调用 */
+}
+
+/* 装饰器 */
+.highlight .nd {
+    color: #8be9fd !important; /* 青色装饰器 */
+}
+
+/* 文档字符串 */
+.highlight .sd {
+    color: #6272a4 !important; /* 灰色文档字符串 */
+}
+
+/* 转义字符 */
+.highlight .se {
+    color: #ff79c6 !important; /* 粉红色转义字符 */
+}
+
+/* 特殊字符 */
+.highlight .sc {
+    color: #f1fa8c !important; /* 黄色特殊字符 */
+}
+
+/* 正则表达式 */
+.highlight .sr {
+    color: #50fa7b !important; /* 绿色正则 */
+}
+
+/* 字符类 */
+.highlight .ss {
+    color: #f1fa8c !important; /* 黄色字符类 */
+}
+
+/* Shell/Bash 特定高亮 */
+.highlight .ch,
+.highlight .cpf {
+    color: #f1fa8c !important; /* 黄色命令 */
+}
+
+/* Git diff 高亮 */
+.highlight .gi {
+    background-color: #00ff0033 !important; /* 绿色背景 - 添加 */
+}
+
+.highlight .gd {
+    background-color: #ff000033 !important; /* 红色背景 - 删除 */
+}
+
+/* 内联代码 */
+code:not(.highlight code) {
+    color: var(--accent-primary) !important;
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* 响应式代码块 */
+@media (max-width: 768px) {
+    .highlight {
+        font-size: 0.9rem;
+    }
+
+    .highlight pre {
+        padding: 0.8rem;
+    }
+}

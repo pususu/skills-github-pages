@@ -1,57 +1,251 @@
-<header>
+# 蒲素的博客
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+一个基于 Hugo 构建的个人技术博客，采用暗蓝色主题和绿色高亮。
 
-# GitHub Pages
+## 特色
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+- 🎨 **暗蓝色主题**: 护眼的深色界面设计
+- 📱 **三栏布局**: 左侧文章目录，中间正文，右侧大纲
+- ✨ **绿色高亮**: 代码语法高亮采用绿色主题
+- 📱 **响应式设计**: 完美适配桌面和移动设备
+- ⚡ **性能优化**: 静态站点，加载快速
 
-</header>
+## 项目结构
 
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
+```
+hugo-blog/
+├── content/                 # 内容文件
+│   ├── _index.md           # 首页
+│   ├── about.md            # 关于页面
+│   └── posts/              # 文章目录
+│       ├── hello-world.md
+│       └── hugo-tutorial.md
+├── static/                 # 静态资源
+├── themes/                 # 主题目录
+│   └── custom-theme/       # 自定义主题
+│       ├── layouts/        # 布局模板
+│       │   └── _default/
+│       │       ├── baseof.html
+│       │       ├── single.html
+│       │       └── list.html
+│       ├── static/         # 主题静态资源
+│       │   ├── css/
+│       │   │   ├── style.css
+│       │   │   └── highlight.css
+│       │   └── js/
+│       │       └── toc.js
+│       └── theme.toml
+├── config.yaml             # 配置文件
+└── README.md               # 说明文档
+```
 
-## Finish
+## 本地开发
 
-_Congratulations friend, you've completed this course!_
+### 环境要求
 
-<img src=https://octodex.github.com/images/constructocat2.jpg alt=celebrate width=300 align=right>
+- Hugo >= 0.100.0
+- Git
 
-Your blog is now live and has been deployed!
+### 安装 Hugo
 
-Here's a recap of all the tasks you've accomplished in your repository:
+```bash
+# macOS
+brew install hugo
 
-- You enabled GitHub Pages.
-- You selected a theme using the config file.
-- You learned about proper directory format and file naming conventions in Jekyll.
-- You created your first blog post with Jekyll!
+# Windows
+choco install hugo
 
-### What's next?
+# Linux
+sudo apt-get install hugo
+```
 
-- Keep working on your GitHub Pages site... we love seeing what you come up with!
-- We'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
+### 启动开发服务器
 
-<footer>
+```bash
+cd hugo-blog
+hugo server -D
+```
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+访问 http://localhost:1313 查看效果。
+
+## 撰写文章
+
+### 创建新文章
+
+```bash
+hugo new posts/new-article.md
+```
+
+### 文章格式
+
+```markdown
+---
+title: "文章标题"
+date: 2024-01-20T14:30:00Z
+categories: ["分类1", "分类2"]
+tags: ["标签1", "标签2"]
+draft: false
+---
+
+# 文章内容
+
+这里是文章正文...
+```
+
+## 主题定制
+
+### 配色方案
+
+主题使用 CSS 变量定义颜色，可以轻松修改：
+
+```css
+:root {
+    --bg-primary: #0a0e27;        /* 深蓝黑色背景 */
+    --bg-secondary: #151932;      /* 次要背景 */
+    --text-primary: #e4e8f7;      /* 主要文字颜色 */
+    --accent-primary: #00d4aa;    /* 主要强调色（绿色） */
+    --accent-secondary: #00a67e;  /* 次要强调色 */
+    --link-color: #4fc3f7;        /* 链接颜色 */
+    --code-bg: #1a1f3a;           /* 代码背景 */
+}
+```
+
+### 布局调整
+
+三栏布局可以通过修改 CSS 调整：
+
+```css
+.three-column-layout {
+    display: flex;
+    gap: 1rem;
+}
+
+.sidebar-left { flex: 0 0 250px; }
+.content { flex: 1; }
+.sidebar-right { flex: 0 0 300px; }
+```
+
+## 部署
+
+### 手动部署
+
+```bash
+# 构建静态文件
+hugo
+
+# public 目录包含所有静态文件
+# 可以直接部署到任何静态文件服务器
+```
+
+### GitHub Actions 自动部署
+
+1. Fork 或创建仓库
+2. 设置 `GITHUB_TOKEN` 权限
+3. 推送代码，自动触发部署
+
+### 部署到不同平台
+
+#### GitHub Pages
+
+```bash
+# 将 public 目录推送到 gh-pages 分支
+hugo
+cd public
+git init
+git add .
+git commit -m "Deploy to GitHub Pages"
+git push -f https://github.com/username/username.github.io.git master:gh-pages
+```
+
+#### Netlify
+
+1. 连接 GitHub 仓库
+2. 构建命令: `hugo`
+3. 发布目录: `public`
+
+#### Vercel
+
+1. 导入 GitHub 仓库
+2. 构建设置会自动检测 Hugo
+3. 自动部署
+
+## 功能特性
+
+### 三栏布局
+
+- **左侧**: 文章目录和文件树
+- **中间**: 主要内容区域
+- **右侧**: 文章大纲和分类标签
+
+### 目录高亮
+
+- 滚动时自动高亮当前章节
+- 点击目录平滑滚动到对应位置
+- 响应式设计，移动端自动隐藏
+
+### 代码高亮
+
+支持多种编程语言的语法高亮：
+
+```javascript
+// JavaScript 示例
+function helloWorld() {
+    console.log("Hello, World!");
+    return "Welcome to Hugo!";
+}
+```
+
+```python
+# Python 示例
+def hello_world():
+    print("Hello, World!")
+    return "Welcome to Hugo!"
+```
+
+### 响应式设计
+
+- 桌面端显示完整三栏布局
+- 平板端隐藏右侧栏
+- 手机端转换为单栏布局
+
+## 自定义扩展
+
+### 添加新页面
+
+```bash
+hugo new page-name.md
+```
+
+### 创建分类和标签
+
+在文章 front matter 中定义：
+
+```yaml
+categories: ["技术", "前端开发"]
+tags: ["JavaScript", "CSS", "HTML"]
+```
+
+### 自定义 CSS
+
+在 `themes/custom-theme/static/css/style.css` 中添加自定义样式。
+
+### 添加 JavaScript 功能
+
+在 `themes/custom-theme/static/js/` 目录下添加 JavaScript 文件。
+
+## 许可证
+
+MIT License - 详见 LICENSE 文件
+
+## 贡献
+
+欢迎提交 Issue 和 Pull Request！
+
+## 联系方式
+
+- GitHub: @pusu404
+- 邮箱: your-email@example.com
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+**感谢所有开源项目的贡献者！**

@@ -1,0 +1,29 @@
+baseURL: 'https://www.pusu.life/'
+languageCode: 'zh-cn'
+title: '蒲素的博客'
+theme: 'custom-theme'
+
+menu:
+  main:
+    - name: '首页'
+      url: '/'
+      weight: 10
+    - name: '归档'
+      url: '/posts/'
+      weight: 20
+    - name: '关于'
+      url: '/about/'
+      weight: 30
+
+params:
+  author: '蒲素'
+  description: '技术博客与思考'
+  keywords: ['技术', '博客', '编程', '思考']
+
+markup:
+  highlight:
+    style: 'github-dark'
+    lineNos: true
+  goldmark:
+    renderer:
+      unsafe: true

@@ -1,0 +1,6 @@
+name = 'Custom Theme'
+license = 'MIT'
+description = 'Custom dark blue theme with green highlights'
+
+[author]
+  name = '蒲素'

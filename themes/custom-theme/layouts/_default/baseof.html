@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description | default .Site.Params.description }}">
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/highlight.css" | relURL }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="site-title"><a href="{{ "/" | relURL }}">{{ .Site.Title }}</a></h1>
+            <nav class="nav">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+                {{ end }}
+            </nav>
+        </header>
+
+        <div class="main-content">
+            {{ block "main" . }}{{ end }}
+        </div>
+
+        <footer class="footer">
+            <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="{{ "js/toc.js" | relURL }}"></script>
+</body>
+</html>

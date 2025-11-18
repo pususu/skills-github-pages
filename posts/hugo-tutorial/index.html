@@ -1,0 +1,268 @@
+<!doctype html><html lang=zh-cn><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Hugo博客搭建教程 - 蒲素的博客</title><meta name=description content="技术博客与思考"><link rel=stylesheet href=/skills-github-pages/css/style.css><link rel=stylesheet href=/skills-github-pages/css/highlight.css></head><body><div class=container><header class=header><h1 class=site-title><a href=/>蒲素的博客</a></h1><nav class=nav><a href=/skills-github-pages/>首页</a>
+<a href=/skills-github-pages/posts/>归档</a>
+<a href=/skills-github-pages/about/>关于</a></nav></header><div class=main-content><div class=three-column-layout><aside class=sidebar-left><div class=file-tree><h3>文章目录</h3><ul class=tree><li class=year-group><span class=year>2024</span><ul><li><a href=https://pususu.github.io/skills-github-pages/posts/hugo-tutorial/ class=active>Hugo博客搭建教程</a></li><li><a href=https://pususu.github.io/skills-github-pages/posts/hello-world/ class=active>Hello World - 我的博客正式上线</a></li></ul></li></ul></div></aside><main class=content><article class=post><header class=post-header><h1 class=post-title>Hugo博客搭建教程</h1><div class=post-meta><time datetime=2024-01-20>2024年1月20日</time>
+<span class=categories>|
+教程
+/ Hugo</span></div></header><div class=post-content><h1 id=hugo博客搭建教程>Hugo博客搭建教程</h1><p>Hugo是一个强大的静态站点生成器，用Go语言编写，构建速度极快。本教程将教你如何从零开始搭建一个Hugo博客。</p><h2 id=什么是hugo>什么是Hugo？</h2><p>Hugo是由Steve Francia创建的静态网站生成器，具有以下特点：</p><ul><li>⚡ <strong>构建速度快</strong>: 毫秒级构建</li><li>🎨 <strong>主题丰富</strong>: 官方和社区提供大量主题</li><li>📱 <strong>响应式</strong>: 自动生成移动端友好页面</li><li>🔧 <strong>配置简单</strong>: YAML配置文件</li><li>🚀 <strong>部署简单</strong>: 生成静态文件，可部署到任何主机</li></ul><h2 id=安装hugo>安装Hugo</h2><h3 id=macos安装>macOS安装</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 使用Homebrew安装</span>
+</span></span><span style=display:flex><span>brew install hugo
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 验证安装</span>
+</span></span><span style=display:flex><span>hugo version
+</span></span></code></pre></td></tr></table></div></div><h3 id=windows安装>Windows安装</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 使用Chocolatey安装</span>
+</span></span><span style=display:flex><span>choco install hugo
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 或者使用Scoop安装</span>
+</span></span><span style=display:flex><span>scoop install hugo
+</span></span></code></pre></td></tr></table></div></div><h3 id=linux安装>Linux安装</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># Ubuntu/Debian</span>
+</span></span><span style=display:flex><span>sudo apt-get install hugo
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># CentOS/RHEL</span>
+</span></span><span style=display:flex><span>sudo yum install hugo
+</span></span></code></pre></td></tr></table></div></div><h2 id=创建新站点>创建新站点</h2><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 创建新站点</span>
+</span></span><span style=display:flex><span>hugo new site my-blog
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 进入站点目录</span>
+</span></span><span style=display:flex><span>cd my-blog
+</span></span></code></pre></td></tr></table></div></div><h2 id=安装主题>安装主题</h2><p>Hugo支持多种主题安装方式：</p><h3 id=1-git子模块方式>1. Git子模块方式</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 初始化Git仓库</span>
+</span></span><span style=display:flex><span>git init
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 添加主题作为子模块</span>
+</span></span><span style=display:flex><span>git submodule add https://github.com/theme-author/theme-name.git themes/theme-name
+</span></span></code></pre></td></tr></table></div></div><h3 id=2-直接下载>2. 直接下载</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 下载主题到themes目录</span>
+</span></span><span style=display:flex><span>cd themes
+</span></span><span style=display:flex><span>git clone https://github.com/theme-author/theme-name.git
+</span></span></code></pre></td></tr></table></div></div><h2 id=配置文件>配置文件</h2><p>Hugo支持多种配置文件格式：</p><h3 id=configyaml-推荐>config.yaml (推荐)</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#7ee787>baseURL</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;https://yourdomain.com&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>languageCode</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;zh-cn&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>title</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;My Blog&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>theme</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;theme-name&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>params</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>author</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;Your Name&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>description</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;Blog description&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>menu</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>main</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;Home&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>url</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;/&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>weight</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>10</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;Posts&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>url</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;/posts/&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>weight</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>20</span><span style=color:#6e7681>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=创建内容>创建内容</h2><h3 id=创建文章>创建文章</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 创建新文章</span>
+</span></span><span style=display:flex><span>hugo new posts/my-first-post.md
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 创建页面</span>
+</span></span><span style=display:flex><span>hugo new about.md
+</span></span></code></pre></td></tr></table></div></div><h3 id=文章模板>文章模板</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span>---
+</span></span><span style=display:flex><span>title: &#34;文章标题&#34;
+</span></span><span style=display:flex><span>date: 2024-01-20T14:30:00Z
+</span></span><span style=display:flex><span>categories: [&#34;技术&#34;]
+</span></span><span style=display:flex><span>tags: [&#34;编程&#34;, &#34;教程&#34;]
+</span></span><span style=display:flex><span>draft: false
+</span></span><span style=display:flex><span>---
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#79c0ff;font-weight:700># 文章内容
+</span></span></span><span style=display:flex><span><span style=color:#79c0ff;font-weight:700></span>
+</span></span><span style=display:flex><span>这里写文章内容...
+</span></span></code></pre></td></tr></table></div></div><h2 id=本地开发>本地开发</h2><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">8
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 启动开发服务器</span>
+</span></span><span style=display:flex><span>hugo server -D
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 带草稿的预览</span>
+</span></span><span style=display:flex><span>hugo server -D --bind 0.0.0.0 --port <span style=color:#a5d6ff>1313</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8b949e;font-style:italic># 构建生产版本</span>
+</span></span><span style=display:flex><span>hugo
+</span></span></code></pre></td></tr></table></div></div><h2 id=自定义主题>自定义主题</h2><h3 id=目录结构>目录结构</h3><pre tabindex=0><code>themes/
+└── custom-theme/
+    ├── layouts/
+    │   ├── _default/
+    │   │   ├── baseof.html
+    │   │   ├── single.html
+    │   │   └── list.html
+    │   └── index.html
+    ├── static/
+    │   ├── css/
+    │   └── js/
+    └── theme.toml
+</code></pre><h3 id=自定义css>自定义CSS</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-css data-lang=css><span style=display:flex><span><span style=color:#8b949e;font-style:italic>/* themes/custom-theme/static/css/style.css */</span>
+</span></span><span style=display:flex><span><span style=color:#7ee787>body</span> {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>font-family</span>: Arial, <span style=color:#79c0ff>sans-serif</span>;
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>line-height</span>: <span style=color:#a5d6ff>1.6</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>.<span style=color:#f0883e;font-weight:700>container</span> {
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>max-width</span>: <span style=color:#a5d6ff>1200</span><span style=color:#ff7b72>px</span>;
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>margin</span>: <span style=color:#a5d6ff>0</span> <span style=color:#79c0ff>auto</span>;
+</span></span><span style=display:flex><span>    <span style=color:#ff7b72>padding</span>: <span style=color:#a5d6ff>0</span> <span style=color:#a5d6ff>20</span><span style=color:#ff7b72>px</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></td></tr></table></div></div><h2 id=部署博客>部署博客</h2><h3 id=部署到github-pages>部署到GitHub Pages</h3><ol><li>创建GitHub仓库</li><li>构建静态文件：<code>hugo</code></li><li>将<code>public</code>目录推送到GitHub</li><li>在仓库设置中启用GitHub Pages</li></ol><h3 id=使用github-actions>使用GitHub Actions</h3><p>创建<code>.github/workflows/deploy.yml</code>:</p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">22
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>Deploy Hugo Site</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>on</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>push</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>branches</span>:<span style=color:#6e7681> </span>[<span style=color:#6e7681> </span><span style=color:#a5d6ff>main ]</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>jobs</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>build-deploy</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>runs-on</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>ubuntu-latest</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>steps</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>uses</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>actions/checkout@v3</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>with</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>        </span><span style=color:#7ee787>submodules</span>:<span style=color:#6e7681> </span><span style=color:#79c0ff>true</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>Setup Hugo</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>uses</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>peaceiris/actions-hugo@v2</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>with</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>        </span><span style=color:#7ee787>hugo-version</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;latest&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>Build</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>run</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>hugo</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span>- <span style=color:#7ee787>name</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>Deploy</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>uses</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>peaceiris/actions-gh-pages@v3</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>      </span><span style=color:#7ee787>with</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>        </span><span style=color:#7ee787>github_token</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>${{ secrets.GITHUB_TOKEN }}</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>        </span><span style=color:#7ee787>publish_dir</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>./public</span><span style=color:#6e7681>
+</span></span></span></code></pre></td></tr></table></div></div><h2 id=高级功能>高级功能</h2><h3 id=代码高亮>代码高亮</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#8b949e;font-style:italic># config.yaml</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681></span><span style=color:#7ee787>markup</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>  </span><span style=color:#7ee787>highlight</span>:<span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>style</span>:<span style=color:#6e7681> </span><span style=color:#a5d6ff>&#39;github-dark&#39;</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>lineNos</span>:<span style=color:#6e7681> </span><span style=color:#79c0ff>true</span><span style=color:#6e7681>
+</span></span></span><span style=display:flex><span><span style=color:#6e7681>    </span><span style=color:#7ee787>lineNumbersInTable</span>:<span style=color:#6e7681> </span><span style=color:#79c0ff>true</span><span style=color:#6e7681>
+</span></span></span></code></pre></td></tr></table></div></div><h3 id=短代码>短代码</h3><p>创建<code>layouts/shortcodes/youtube.html</code>:</p><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">6
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>&lt;<span style=color:#7ee787>div</span> class<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;embed-responsive&#34;</span>&gt;
+</span></span><span style=display:flex><span>    &lt;<span style=color:#7ee787>iframe</span> src<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;https://www.youtube.com/embed/{{ .Get &#34;</span>id<span style=color:#f85149>&#34;</span> <span style=color:#f85149>}}&#34;</span> 
+</span></span><span style=display:flex><span>            frameborder<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;0&#34;</span> 
+</span></span><span style=display:flex><span>            allowfullscreen&gt;
+</span></span><span style=display:flex><span>    &lt;/<span style=color:#7ee787>iframe</span>&gt;
+</span></span><span style=display:flex><span>&lt;/<span style=color:#7ee787>div</span>&gt;
+</span></span></code></pre></td></tr></table></div></div><p>使用方式：<code><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading=eager referrerpolicy=strict-origin-when-cross-origin src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 title="YouTube video"></iframe></div></code></p><h3 id=分类和标签>分类和标签</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">5
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span>---
+</span></span><span style=display:flex><span>title: &#34;文章标题&#34;
+</span></span><span style=display:flex><span>categories: [&#34;技术&#34;, &#34;编程&#34;]
+</span></span><span style=display:flex><span>tags: [&#34;JavaScript&#34;, &#34;前端开发&#34;]
+</span></span><span style=display:flex><span>---
+</span></span></code></pre></td></tr></table></div></div><h2 id=性能优化>性能优化</h2><h3 id=图片优化>图片优化</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span><figure><img src=/images/photo.jpg alt=图片描述 width=800><figcaption>
+      <p>图片标题</p>
+    </figcaption>
+</figure>
+
+</span></span></code></pre></td></tr></table></div></div><h3 id=资源管道>资源管道</h3><div class=highlight><div style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:.4em;padding:0 .4em;color:#737679">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=display:flex><span>{{ $css := resources.Get &#34;css/style.css&#34; | minify | fingerprint }}
+</span></span><span style=display:flex><span>&lt;<span style=color:#7ee787>link</span> rel<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;stylesheet&#34;</span> href<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;{{ $css.RelPermalink }}&#34;</span> integrity<span style=color:#ff7b72;font-weight:700>=</span><span style=color:#a5d6ff>&#34;{{ $css.Data.Integrity }}&#34;</span>&gt;
+</span></span></code></pre></td></tr></table></div></div><h2 id=总结>总结</h2><p>Hugo是一个非常优秀的静态站点生成器，特别适合搭建技术博客。通过本教程，你应该能够：</p><ul><li>安装和配置Hugo</li><li>创建和管理内容</li><li>自定义主题样式</li><li>部署到生产环境</li></ul><p>开始你的Hugo博客之旅吧！</p><hr><p><strong>相关链接</strong>:</p><ul><li><a href=https://gohugo.io/documentation/>Hugo官方文档</a></li><li><a href=https://themes.gohugo.io/>Hugo主题市场</a></li><li><a href=https://discourse.gohugo.io/>Hugo社区</a></li></ul></div><div class=post-tags><span class=tag>Hugo</span>
+<span class=tag>静态网站</span>
+<span class=tag>教程</span></div></article></main><aside class=sidebar-right><div class=table-of-contents><h3>文章大纲</h3><nav id=toc><nav id=TableOfContents><ul><li><a href=#什么是hugo>什么是Hugo？</a></li><li><a href=#安装hugo>安装Hugo</a><ul><li><a href=#macos安装>macOS安装</a></li><li><a href=#windows安装>Windows安装</a></li><li><a href=#linux安装>Linux安装</a></li></ul></li><li><a href=#创建新站点>创建新站点</a></li><li><a href=#安装主题>安装主题</a><ul><li><a href=#1-git子模块方式>1. Git子模块方式</a></li><li><a href=#2-直接下载>2. 直接下载</a></li></ul></li><li><a href=#配置文件>配置文件</a><ul><li><a href=#configyaml-推荐>config.yaml (推荐)</a></li></ul></li><li><a href=#创建内容>创建内容</a><ul><li><a href=#创建文章>创建文章</a></li><li><a href=#文章模板>文章模板</a></li></ul></li><li><a href=#本地开发>本地开发</a></li><li><a href=#自定义主题>自定义主题</a><ul><li><a href=#目录结构>目录结构</a></li><li><a href=#自定义css>自定义CSS</a></li></ul></li><li><a href=#部署博客>部署博客</a><ul><li><a href=#部署到github-pages>部署到GitHub Pages</a></li><li><a href=#使用github-actions>使用GitHub Actions</a></li></ul></li><li><a href=#高级功能>高级功能</a><ul><li><a href=#代码高亮>代码高亮</a></li><li><a href=#短代码>短代码</a></li><li><a href=#分类和标签>分类和标签</a></li></ul></li><li><a href=#性能优化>性能优化</a><ul><li><a href=#图片优化>图片优化</a></li><li><a href=#资源管道>资源管道</a></li></ul></li><li><a href=#总结>总结</a></li></ul></nav></nav></div></aside></div></div><footer class=footer><p>&copy; 2025 蒲素. All rights reserved.</p></footer></div><script src=/skills-github-pages/js/toc.js></script></body></html>

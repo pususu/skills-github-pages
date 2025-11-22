@@ -1,19 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>博客 on </title>
-    <link>//localhost:1313/categories/%E5%8D%9A%E5%AE%A2/</link>
-    <description>Recent content in 博客 on </description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello World - 我的博客正式上线</title>
-      <link>//localhost:1313/posts/hello-world/</link>
-      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/hello-world/</guid>
-      <description>&lt;h1 id=&#34;hello-world---我的博客正式上线&#34;&gt;Hello World - 我的博客正式上线&lt;/h1&gt;&#xA;&lt;p&gt;今天，我的个人技术博客正式上线了！这是一个值得纪念的日子。&lt;/p&gt;&#xA;&lt;h2 id=&#34;为什么要建博客&#34;&gt;为什么要建博客？&lt;/h2&gt;&#xA;&lt;h3 id=&#34;技术沉淀&#34;&gt;技术沉淀&lt;/h3&gt;&#xA;&lt;p&gt;在编程学习的道路上，我发现有很多知识点需要记录和总结。博客是一个很好的知识沉淀平台：&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;func&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;fmt&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;Println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;欢迎来到我的博客！&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;分享交流&#34;&gt;分享交流&lt;/h3&gt;&#xA;&lt;p&gt;通过博客，我可以：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;分享技术心得&lt;/li&gt;&#xA;&lt;li&gt;记录学习笔记&lt;/li&gt;&#xA;&lt;li&gt;结识技术同好&lt;/li&gt;&#xA;&lt;li&gt;建立个人品牌&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;博客特色&#34;&gt;博客特色&lt;/h2&gt;&#xA;&lt;h3 id=&#34;暗蓝色主题&#34;&gt;暗蓝色主题&lt;/h3&gt;&#xA;&lt;p&gt;采用护眼的暗蓝色主题，长时间阅读不会疲劳。&lt;/p&gt;&#xA;&lt;h3 id=&#34;三栏布局&#34;&gt;三栏布局&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;左侧&lt;/strong&gt;: 文章目录，方便导航&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;中间&lt;/strong&gt;: 主要内容区域&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;右侧&lt;/strong&gt;: 文章大纲，快速定位&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;代码高亮&#34;&gt;代码高亮&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hello_blog&lt;/span&gt;():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;这是一个演示函数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;欢迎来到蒲素的博客！&amp;#34;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;博客正式上线&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 调用函数&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; hello_blog()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;print(result)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;技术栈&#34;&gt;技术栈&lt;/h2&gt;&#xA;&lt;p&gt;本博客使用以下技术构建：&lt;/p&gt;&#xA;&lt;table&gt;&#xA;  &lt;thead&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;th&gt;技术&lt;/th&gt;&#xA;          &lt;th&gt;用途&lt;/th&gt;&#xA;          &lt;th&gt;版本&lt;/th&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/thead&gt;&#xA;  &lt;tbody&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;Hugo&lt;/td&gt;&#xA;          &lt;td&gt;静态站点生成器&lt;/td&gt;&#xA;          &lt;td&gt;v0.100+&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;CSS&lt;/td&gt;&#xA;          &lt;td&gt;样式设计&lt;/td&gt;&#xA;          &lt;td&gt;CSS3&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;      &lt;tr&gt;&#xA;          &lt;td&gt;JavaScript&lt;/td&gt;&#xA;          &lt;td&gt;交互功能&lt;/td&gt;&#xA;          &lt;td&gt;ES6+&lt;/td&gt;&#xA;      &lt;/tr&gt;&#xA;  &lt;/tbody&gt;&#xA;&lt;/table&gt;&#xA;&lt;h2 id=&#34;未来计划&#34;&gt;未来计划&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;持续输出高质量技术文章&lt;/li&gt;&#xA;&lt;li&gt;完善博客功能和样式&lt;/li&gt;&#xA;&lt;li&gt;学习更多前端技术&lt;/li&gt;&#xA;&lt;li&gt;开源博客主题&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;&#xA;&lt;p&gt;这是第一篇文章，但绝不是最后一篇。希望这个博客能见证我的技术成长之路，也能帮助到其他开发者。&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;Write code, change the world.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;—— 蒲素&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>博客 on</title><link>https://www.pusu.life/categories/%E5%8D%9A%E5%AE%A2/</link><description>Recent content in 博客 on</description><generator>Hugo</generator><language>en</language><lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0000</lastBuildDate><atom:link href="https://www.pusu.life/categories/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World - 我的博客正式上线</title><link>https://www.pusu.life/posts/hello-world/</link><pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate><guid>https://www.pusu.life/posts/hello-world/</guid><description>&lt;h1 id="hello-world---我的博客正式上线"&gt;Hello World - 我的博客正式上线&lt;/h1&gt;
+&lt;p&gt;今天，我的个人技术博客正式上线了！这是一个值得纪念的日子。&lt;/p&gt;
+&lt;h2 id="为什么要建博客"&gt;为什么要建博客？&lt;/h2&gt;
+&lt;h3 id="技术沉淀"&gt;技术沉淀&lt;/h3&gt;
+&lt;p&gt;在编程学习的道路上，我发现有很多知识点需要记录和总结。博客是一个很好的知识沉淀平台：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;func&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fmt&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;Println&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#a6e22e"&gt;fmt&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;Println&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;欢迎来到我的博客！&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="分享交流"&gt;分享交流&lt;/h3&gt;
+&lt;p&gt;通过博客，我可以：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;分享技术心得&lt;/li&gt;
+&lt;li&gt;记录学习笔记&lt;/li&gt;
+&lt;li&gt;结识技术同好&lt;/li&gt;
+&lt;li&gt;建立个人品牌&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="博客特色"&gt;博客特色&lt;/h2&gt;
+&lt;h3 id="暗蓝色主题"&gt;暗蓝色主题&lt;/h3&gt;
+&lt;p&gt;采用护眼的暗蓝色主题，长时间阅读不会疲劳。&lt;/p&gt;
+&lt;h3 id="三栏布局"&gt;三栏布局&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;左侧&lt;/strong&gt;: 文章目录，方便导航&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中间&lt;/strong&gt;: 主要内容区域&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;右侧&lt;/strong&gt;: 文章大纲，快速定位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="代码高亮"&gt;代码高亮&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;hello_blog&lt;/span&gt;():
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&amp;#34;&amp;#34;这是一个演示函数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; print(&lt;span style="color:#e6db74"&gt;&amp;#34;欢迎来到蒲素的博客！&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;博客正式上线&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# 调用函数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;result &lt;span style="color:#f92672"&gt;=&lt;/span&gt; hello_blog()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(result)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="技术栈"&gt;技术栈&lt;/h2&gt;
+&lt;p&gt;本博客使用以下技术构建：&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;技术&lt;/th&gt;
+ &lt;th&gt;用途&lt;/th&gt;
+ &lt;th&gt;版本&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Hugo&lt;/td&gt;
+ &lt;td&gt;静态站点生成器&lt;/td&gt;
+ &lt;td&gt;v0.100+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;CSS&lt;/td&gt;
+ &lt;td&gt;样式设计&lt;/td&gt;
+ &lt;td&gt;CSS3&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;JavaScript&lt;/td&gt;
+ &lt;td&gt;交互功能&lt;/td&gt;
+ &lt;td&gt;ES6+&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="未来计划"&gt;未来计划&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;持续输出高质量技术文章&lt;/li&gt;
+&lt;li&gt;完善博客功能和样式&lt;/li&gt;
+&lt;li&gt;学习更多前端技术&lt;/li&gt;
+&lt;li&gt;开源博客主题&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="结语"&gt;结语&lt;/h2&gt;
+&lt;p&gt;这是第一篇文章，但绝不是最后一篇。希望这个博客能见证我的技术成长之路，也能帮助到其他开发者。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Write code, change the world.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;—— 蒲素&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,86 @@
+{{ define "main" }}
+<div class="three-column-layout">
+    <!-- 左侧：文件目录 -->
+    <aside class="sidebar-left">
+        <div class="file-tree">
+            <h3>文章目录</h3>
+            <ul class="tree">
+                {{ range (where site.RegularPages "Type" "posts") }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </aside>
+
+    <!-- 中间：首页内容 -->
+    <main class="content">
+        <div class="home-intro">
+            <h1>{{ .Site.Title }}</h1>
+            <p class="description">{{ .Site.Params.description }}</p>
+        </div>
+
+        <h2>最新文章</h2>
+        <div class="posts-list">
+            {{ range first 10 (where site.RegularPages "Type" "posts") }}
+            <article class="post-preview">
+                <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+                <div class="post-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006年1月2日" }}</time>
+                    {{ with .Params.categories }}
+                    <span class="categories"> |
+                        {{ range $i, $cat := . }}
+                            {{ if $i }} / {{ end }}{{ $cat }}
+                        {{ end }}
+                    </span>
+                    {{ end }}
+                </div>
+                {{ if .Summary }}
+                <div class="summary">
+                    {{ .Summary }}
+                </div>
+                {{ end }}
+                {{ with .Params.tags }}
+                <div class="post-tags">
+                    {{ range . }}
+                    <span class="tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </article>
+            {{ end }}
+        </div>
+    </main>
+
+    <!-- 右侧：分类和标签 -->
+    <aside class="sidebar-right">
+        {{ if .Site.Taxonomies.categories }}
+        <div class="categories">
+            <h3>分类</h3>
+            <ul>
+                {{ range $key, $taxonomy := .Site.Taxonomies.categories }}
+                <li>
+                    <a href="{{ "/categories/" | relURL }}{{ $key | urlize }}">{{ $key }}</a>
+                    <span class="count">({{ $taxonomy.Count }})</span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        {{ if .Site.Taxonomies.tags }}
+        <div class="tags">
+            <h3>标签</h3>
+            <div class="tag-cloud">
+                {{ range $key, $taxonomy := .Site.Taxonomies.tags }}
+                <span class="tag">
+                    <a href="{{ "/tags/" | relURL }}{{ $key | urlize }}">{{ $key }}</a>
+                </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </aside>
+</div>
+{{ end }}
